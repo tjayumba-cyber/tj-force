@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #333333;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-perforce-orange hover:bg-perforce-orange-dark text-white font-semibold px-6 py-3 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-perforce-navy font-semibold px-6 py-3 transition-colors;
+  }
+
+  .btn-outline-navy {
+    @apply inline-flex items-center justify-center border-2 border-perforce-navy text-perforce-navy hover:bg-perforce-navy hover:text-white font-semibold px-6 py-3 transition-colors;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-perforce-navy leading-tight;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
